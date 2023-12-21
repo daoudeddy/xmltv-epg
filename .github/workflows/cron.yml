@@ -48,7 +48,7 @@ jobs:
         
       - name: Grap EPG
         working-directory: ./epg
-        run: npm run grab -- --maxConnections 8 --site=${{ matrix.site }} --lang=${{ matrix.lang }} -o ${{ matrix.name }}.xml
+        run: npm run grab -- --maxConnections 8 --site=${{ matrix.site }} --lang=${{ matrix.lang }} --gzip -o ${{ matrix.name }}.xml 
 
       - run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
       
@@ -61,3 +61,4 @@ jobs:
           tag_name: '${{ env.DATE }}'
           files: |
             epg/epg-*.xml
+            epg/epg-*.xml.gz
