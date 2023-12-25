@@ -1,0 +1,34 @@
+{
+  "include": [
+    {
+      "name": "epg-osn-ar",
+      "site": "osn.com",
+      "lang": "ar"
+    },
+    {
+      "name": "epg-osn-en",
+      "site": "osn.com",
+      "lang": "en"
+    },
+    {
+      "name": "epg-bein-ar",
+      "site": "bein.com",
+      "lang": "ar"
+    },
+    {
+      "name": "epg-bein-en",
+      "site": "bein.com",
+      "lang": "en"
+    },
+    {
+      "name": "epg-elcinema-ar",
+      "site": "elcinema.com",
+      "lang": "ar"
+    },
+    {
+      "name": "epg-elcinema-en",
+      "site": "elcinema.com",
+      "lang": "en"
+    }
+  ]
+}
