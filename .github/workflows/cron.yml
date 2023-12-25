@@ -22,22 +22,20 @@ jobs:
       - name: Set matrix data
         id: set-matrix
         run: echo "matrix=$(jq -c . < ./providers.json)" >> $GITHUB_OUTPUT
-
+      - uses: actions/checkout@v4
+        with: 
+          repository: iptv-org/epg
+          path: epg
+      - name: NPM Install
+        working-directory: ./epg
+        run: npm install
+        
   grab:
     runs-on: ubuntu-latest
     needs: configure
     strategy:
       matrix: ${{ fromJson(needs.configure.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@v4
-        with: 
-          repository: iptv-org/epg
-          path: epg
-
-      - name: NPM Install
-        working-directory: ./epg
-        run: npm install
-        
       - name: Grap EPG
         working-directory: ./epg
         run: npm run grab -- --maxConnections 8 --site=${{ matrix.site }} --lang=${{ matrix.lang }} --gzip -o ${{ matrix.name }}.xml 
