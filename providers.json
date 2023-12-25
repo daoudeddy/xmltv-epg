@@ -29,6 +29,10 @@
       "name": "epg-elcinema-en",
       "site": "elcinema.com",
       "lang": "en"
+    },
+    { "name": "epg-sat-tv-en",
+      "site": "sat.tv",
+      "lang": "en"
     }
   ]
 }
