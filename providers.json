@@ -34,6 +34,16 @@
       "name": "epg-artonline-ar",
       "site": "artonline.tv",
       "lang": "ar"
+    },
+    { 
+      "name": "epg-shahid-ar",
+      "site": "shahid.mbc.net",
+      "lang": "ar"
+    },
+    { 
+      "name": "epg-shahid-en",
+      "site": "shahid.mbc.net",
+      "lang": "en"
     }
   ]
 }
